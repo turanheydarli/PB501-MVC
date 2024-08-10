@@ -1,0 +1,41 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  bms.webmvc:
+    build:
+      context: "\\\\wsl.localhost\\Ubuntu-20.04\\home\\turan\\Projects\\PB501\\PB501-Course\\\
+        MVCTask1"
+      dockerfile: "BMS.WebMVC/Dockerfile"
+      target: "base"
+      args:
+        BUILD_CONFIGURATION: "Debug"
+    command: []
+    entrypoint:
+    - "/opt/rider-debugger/linux-x64/JetBrains.Debugger.Worker"
+    - "--runtimeconfig"
+    - "/opt/rider-debugger/JetBrains.Debugger.Worker.runtimeconfig.json"
+    - "--mode=server"
+    - "--frontend-port=57100"
+    - "--backend-port=57300"
+    - "--timeout=60"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net8.0/BMS.WebMVC.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+      RIDER_DEBUGGER_LOG_DIR: "/var/opt/rider-debugger"
+      RESHARPER_LOG_CONF: "/etc/opt/rider-debugger/backend-log.xml"
+    image: "bms.webmvc:dev"
+    ports:
+    - "127.0.0.1:57000:57100"
+    - "127.0.0.1:57200:57300"
+    volumes:
+    - "C:\\Users\\turan\\.nuget\\packages:/home/app/.nuget/packages"
+    - "\\\\wsl.localhost\\Ubuntu-20.04\\home\\turan\\Projects\\PB501\\PB501-Course\\\
+      MVCTask1\\BMS.WebMVC:/app:rw"
+    - "\\\\wsl.localhost\\Ubuntu-20.04\\home\\turan\\Projects\\PB501\\PB501-Course\\\
+      MVCTask1:/src:rw"
+    - "C:\\Users\\turan\\AppData\\Local\\JetBrains\\RiderRemoteDebugger\\2024.1.4\\\
+      Linux64:/opt/rider-debugger"
+    - "C:\\Users\\turan\\AppData\\Local\\Programs\\Rider\\bin:/etc/opt/rider-debugger/backend-log.xml"
+    - "C:\\Users\\turan\\AppData\\Local\\JetBrains\\Rider2024.1\\log\\DebuggerWorker\\\
+      JetBrains.Debugger.Worker.2024_8_09_15_42_22:/var/opt/rider-debugger:rw"
+    working_dir: "/app"

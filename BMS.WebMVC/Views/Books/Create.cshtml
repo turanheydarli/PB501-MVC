@@ -1,0 +1,53 @@
+@model BMS.Domain.Models.Book
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">Create New Book</h1>
+
+    <!-- Create Book Form -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Book Details</h6>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create" asp-controller="Books">
+                <!-- Title Input -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Title</span>
+                    <input asp-for="Title" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
+                </div>
+
+                <!-- Category Input -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Category</span>
+                    <select asp-for="CategoryId" class="form-control" aria-label="Category" aria-describedby="basic-addon2">
+                        <option value="">Select Category</option>
+                        @foreach (var category in ViewBag.Categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    </select>
+                </div>
+
+                <!-- Publisher Input -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Publisher</span>
+                    <select asp-for="PublisherId" class="form-control" aria-label="Publisher" aria-describedby="basic-addon3">
+                        <option value="">Select Publisher</option>
+                        @foreach (var publisher in ViewBag.Publishers)
+                        {
+                            <option value="@publisher.Id">@publisher.Name</option>
+                        }
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+</div>
