@@ -1,10 +1,9 @@
 using BMS.Application.Services.BooksService.Abstractions;
 using BMS.Application.Services.BooksService.DTOs;
 using BMS.Application.Services.BooksService.Models;
-using BMS.Domain.Models;
-using BMS.Infrastructure.Persistence.Contexts;
-using BMS.Infrastructure.Persistence.Contexts.Abstraction;
-using BMS.Infrastructure.Persistence.Repositories;
+using BMS.Data.Models;
+using BMS.Data.Persistence.Contexts;
+using BMS.Data.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace BMS.Application.Services.BooksService;
@@ -23,28 +22,27 @@ public class BookService : IBookService
     {
         var books = _repository.GetList(include: books =>
         {
-            return books.Include(b => b.Category)
+            return books
+                .Include(b => b.Category)
                 .Include(b => b.Publisher);
         });
 
-
-        BookListModel bookListModel = new BookListModel
+        var booksDto = books.Select(b => new BookDto()
         {
-            Items = new List<BookDto>()
+            Id = b.Id,
+            CreatedAt = b.CreatedAt,
+            CategoryId = b.CategoryId,
+            PublisherId = b.PublisherId,
+            Title = b.Title,
+            UpdatedAt = b.UpdatedAt,
+            CategoryName = b.Category.Name,
+            PublisherName = b.Publisher.Name,
+        });
+
+        var bookListModel = new BookListModel
+        {
+            Items = booksDto.ToList()
         };
-
-        foreach (var book in books)
-        {
-            bookListModel.Items.Add(new BookDto()
-            {
-                Id = book.Id,
-                CreatedAt = book.CreatedAt,
-                UpdatedAt = book.UpdatedAt,
-                Title = book.Title,
-                CategoryName = book.Category.Name,
-                PublisherName = book.Publisher.Name
-            });
-        }
 
         return bookListModel;
     }

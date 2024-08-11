@@ -488,11 +488,7 @@ C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\bin\Debug\net8.0\runtimes\
 C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\bin\Debug\net8.0\BMS.Application.dll
-C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\bin\Debug\net8.0\BMS.Domain.dll
-C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\bin\Debug\net8.0\BMS.Infrastructure.dll
 C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\bin\Debug\net8.0\BMS.Application.pdb
-C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\bin\Debug\net8.0\BMS.Infrastructure.pdb
-C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\bin\Debug\net8.0\BMS.Domain.pdb
 C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\obj\Debug\net8.0\BMS.WebMVC.csproj.AssemblyReference.cache
 C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\obj\Debug\net8.0\BMS.WebMVC.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\obj\Debug\net8.0\BMS.WebMVC.AssemblyInfoInputs.cache
@@ -517,3 +513,6 @@ C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\obj\Debug\net8.0\refint\BM
 C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\obj\Debug\net8.0\BMS.WebMVC.pdb
 C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\obj\Debug\net8.0\BMS.WebMVC.genruntimeconfig.cache
 C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\obj\Debug\net8.0\ref\BMS.WebMVC.dll
+C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\obj\Debug\net8.0\BMS.WebMVC.sourcelink.json
+C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\bin\Debug\net8.0\BMS.Data.dll
+C:\Users\turan\OneDrive\Documents\MVCTask1\BMS.WebMVC\bin\Debug\net8.0\BMS.Data.pdb

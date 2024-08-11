@@ -1,6 +1,6 @@
 using BMS.Application.Services.BooksService.DTOs;
 using BMS.Application.Services.BooksService.Models;
-using BMS.Domain.Models;
+using BMS.Data.Models;
 
 namespace BMS.Application.Services.BooksService.Abstractions;
 

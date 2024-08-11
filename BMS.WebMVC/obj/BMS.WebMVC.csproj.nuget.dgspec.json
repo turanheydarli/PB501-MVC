@@ -26,11 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Domain\\BMS.Domain.csproj": {
-                "projectPath": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Domain\\BMS.Domain.csproj"
-              },
-              "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Infrastructure\\BMS.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Infrastructure\\BMS.Infrastructure.csproj"
+              "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Data\\BMS.Data.csproj": {
+                "projectPath": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Data\\BMS.Data.csproj"
               }
             }
           }
@@ -39,16 +36,88 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\turan\\.dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Data\\BMS.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Data\\BMS.Data.csproj",
+        "projectName": "BMS.Data",
+        "projectPath": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Data\\BMS.Data.csproj",
+        "packagesPath": "C:\\Users\\turan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\turan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Domain\\BMS.Domain.csproj": {
+                "projectPath": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Domain\\BMS.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -97,98 +166,11 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Users\\turan\\.dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Infrastructure\\BMS.Infrastructure.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Infrastructure\\BMS.Infrastructure.csproj",
-        "projectName": "BMS.Infrastructure",
-        "projectPath": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Infrastructure\\BMS.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\turan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Infrastructure\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\turan\\AppData\\Roaming\\NuGet\\NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Domain\\BMS.Domain.csproj": {
-                "projectPath": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Domain\\BMS.Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.7, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.7, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.7, )"
-            },
-            "Microsoft.Extensions.Configuration.Abstractions": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -234,8 +216,8 @@
               "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Application\\BMS.Application.csproj": {
                 "projectPath": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Application\\BMS.Application.csproj"
               },
-              "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Infrastructure\\BMS.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Infrastructure\\BMS.Infrastructure.csproj"
+              "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Data\\BMS.Data.csproj": {
+                "projectPath": "C:\\Users\\turan\\OneDrive\\Documents\\MVCTask1\\BMS.Data\\BMS.Data.csproj"
               }
             }
           }
@@ -244,11 +226,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {

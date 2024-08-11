@@ -1,0 +1,25 @@
+@model BMS.Data.Models.Publisher
+
+
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">Create New Book</h1>
+
+    <!-- Create Book Form -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Book Details</h6>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create" asp-controller="Publishers">
+                <!-- Title Input -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Title</span>
+                    <input asp-for="Name" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+</div>

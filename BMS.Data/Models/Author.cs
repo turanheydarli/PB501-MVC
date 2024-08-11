@@ -1,0 +1,9 @@
+namespace BMS.Data.Models;
+
+public class Author : BaseEntity
+{
+    public string Name { get; set; }
+    
+    public ICollection<AuthorContact> Contacts { get; set; }
+    public ICollection<Book> Books { get; set; }
+}

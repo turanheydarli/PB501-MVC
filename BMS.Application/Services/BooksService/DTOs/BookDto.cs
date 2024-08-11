@@ -1,4 +1,3 @@
-using BMS.Domain.Models;
 
 namespace BMS.Application.Services.BooksService.DTOs;
 

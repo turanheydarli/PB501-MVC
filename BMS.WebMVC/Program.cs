@@ -1,5 +1,5 @@
 using BMS.Application;
-using BMS.Infrastructure;
+using BMS.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

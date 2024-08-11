@@ -1,4 +1,4 @@
-@model BMS.Domain.Models.Book
+@model BMS.WebMVC.Models.BookCreateViewModel
 
 @{
     ViewBag.Title = "title";
@@ -18,32 +18,42 @@
                 <!-- Title Input -->
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Title</span>
-                    <input asp-for="Title" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
+                    <input asp-for="Book.Title" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
                 </div>
 
                 <!-- Category Input -->
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon2">Category</span>
-                    <select asp-for="CategoryId" class="form-control" aria-label="Category" aria-describedby="basic-addon2">
+                    <select asp-for="Book.CategoryId" class="form-control" aria-label="Category" aria-describedby="basic-addon2">
                         <option value="">Select Category</option>
-                        @foreach (var category in ViewBag.Categories)
+                        @foreach (var category in Model.Categories)
                         {
                             <option value="@category.Id">@category.Name</option>
                         }
                     </select>
                 </div>
 
-                <!-- Publisher Input -->
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon3">Publisher</span>
-                    <select asp-for="PublisherId" class="form-control" aria-label="Publisher" aria-describedby="basic-addon3">
+                    <select asp-for="Book.PublisherId" class="form-control" aria-label="Publisher" aria-describedby="basic-addon3">
                         <option value="">Select Publisher</option>
-                        @foreach (var publisher in ViewBag.Publishers)
+                        @foreach (var publisher in Model.Publishers)
                         {
                             <option value="@publisher.Id">@publisher.Name</option>
                         }
                     </select>
                 </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon4">Authors</span>
+                    <select asp-for="AuthorIds" class="form-control" aria-label="Authors" aria-describedby="basic-addon4" multiple>
+                        @foreach (var author in Model.Authors)
+                        {
+                        <option value="@author.Id">@author.Name</option>
+                        }
+                    </select>
+                </div>
+
 
                 <!-- Submit Button -->
                 <button type="submit" class="btn btn-primary">Create</button>

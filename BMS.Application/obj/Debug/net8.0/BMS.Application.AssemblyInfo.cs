@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BMS.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03a89db590b7457a4bdec5a26f31178c68485b5c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83cf78f7860a01d47dda1412b4413eaa0bd77cd3")]
 [assembly: System.Reflection.AssemblyProductAttribute("BMS.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BMS.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

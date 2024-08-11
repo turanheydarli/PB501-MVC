@@ -1,6 +1,6 @@
 using BMS.Application.Services.CategoryService.DTOs;
 
-namespace BMS.Application.Services.CategoryService;
+namespace BMS.Application.Services.CategoryService.Models;
 
 public class CategoryListModel
 {

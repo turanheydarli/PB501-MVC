@@ -1,0 +1,52 @@
+@model BMS.Application.Services.AuthorsService.Models.AuthorListModel
+
+@{
+    ViewBag.Title = "Authors List";
+    Layout = "_Layout";
+}
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Authors</h1>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex justify-content-between align-items-center">
+            <h6 class="m-0 font-weight-bold text-primary">Authors List</h6>
+            <a href="@Url.Action("Create", "Authors")" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Create New Author</span>
+            </a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    @foreach (var book in Model.Items)
+                    {
+                        <tr>
+                            <td>@book.Id</td>
+                            <td>@book.Name</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

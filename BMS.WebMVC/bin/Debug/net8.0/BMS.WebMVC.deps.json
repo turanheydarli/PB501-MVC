@@ -9,7 +9,7 @@
       "BMS.WebMVC/1.0.0": {
         "dependencies": {
           "BMS.Application": "1.0.0",
-          "BMS.Infrastructure": "1.0.0",
+          "BMS.Data": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "8.0.7",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.3"
         },
@@ -1870,19 +1870,13 @@
       },
       "BMS.Application/1.0.0": {
         "dependencies": {
-          "BMS.Domain": "1.0.0",
-          "BMS.Infrastructure": "1.0.0"
+          "BMS.Data": "1.0.0"
         },
         "runtime": {
           "BMS.Application.dll": {}
         }
       },
-      "BMS.Domain/1.0.0": {
-        "runtime": {
-          "BMS.Domain.dll": {}
-        }
-      },
-      "BMS.Infrastructure/1.0.0": {
+      "BMS.Data/1.0.0": {
         "dependencies": {
           "BMS.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.7",
@@ -1890,7 +1884,7 @@
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0"
         },
         "runtime": {
-          "BMS.Infrastructure.dll": {}
+          "BMS.Data.dll": {}
         }
       }
     }
@@ -3012,12 +3006,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "BMS.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "BMS.Infrastructure/1.0.0": {
+    "BMS.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

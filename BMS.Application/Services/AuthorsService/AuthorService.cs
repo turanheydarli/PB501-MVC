@@ -1,9 +1,10 @@
 using BMS.Application.Services.AuthorsService.Abstractions;
 using BMS.Application.Services.AuthorsService.DTOs;
-using BMS.Domain.Models;
-using BMS.Infrastructure.Persistence.Contexts;
-using BMS.Infrastructure.Persistence.Contexts.Abstraction;
-using BMS.Infrastructure.Persistence.Repositories;
+using BMS.Application.Services.AuthorsService.Models;
+using BMS.Data.Models;
+using BMS.Data.Persistence.Contexts;
+using BMS.Data.Persistence.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace BMS.Application.Services.AuthorsService;
 
@@ -14,6 +15,27 @@ public class AuthorService : IAuthorService
     public AuthorService(IRepository<Author, MsSqlDbContext> repository)
     {
         _repository = repository;
+    }
+
+    public AuthorListModel GetAuthorList()
+    {
+        var authors = _repository.GetList(include: a => { return a.Include(b => b.Contacts); });
+
+        var authorsDto = authors.Select(b => new AuthorDto()
+        {
+            Id = b.Id,
+            CreatedAt = b.CreatedAt,
+            UpdatedAt = b.UpdatedAt,
+            Name = b.Name,
+            Contacts = b.Contacts
+        });
+
+        var authorListModel = new AuthorListModel()
+        {
+            Items = authorsDto.ToList()
+        };
+
+        return authorListModel;
     }
 
     public AuthorDto GetAuthorById(int authorId)
@@ -30,7 +52,7 @@ public class AuthorService : IAuthorService
             Id = author.Id,
             Name = author.Name,
             UpdatedAt = author.UpdatedAt,
-            Contact = author.Contact,
+            Contacts = author.Contacts,
             CreatedAt = author.CreatedAt
         };
     }
@@ -42,7 +64,7 @@ public class AuthorService : IAuthorService
         return new AuthorCreatedDto()
         {
             Id = createdAuthor.Id,
-            Contact = author.Contact,
+            Contacts = author.Contacts,
             CreatedAt = author.CreatedAt,
             UpdatedAt = author.UpdatedAt,
             Name = author.Name
@@ -54,7 +76,7 @@ public class AuthorService : IAuthorService
         Author authorToUpdate = _repository.Get(b => b.Id == author.Id);
 
         authorToUpdate.Name = author.Name;
-        authorToUpdate.Contact = author.Contact;
+        authorToUpdate.Contacts = author.Contacts;
         authorToUpdate.UpdatedAt = DateTime.UtcNow;
 
         _repository.Update(authorToUpdate);
@@ -65,7 +87,7 @@ public class AuthorService : IAuthorService
             CreatedAt = author.CreatedAt,
             UpdatedAt = author.UpdatedAt,
             Name = author.Name,
-            Contact = author.Contact,
+            Contacts = author.Contacts,
         };
     }
 

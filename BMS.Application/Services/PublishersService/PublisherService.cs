@@ -1,9 +1,10 @@
 using BMS.Application.Services.PublishersService.Abstractions;
 using BMS.Application.Services.PublishersService.DTOs;
-using BMS.Domain.Models;
-using BMS.Infrastructure.Persistence.Contexts;
-using BMS.Infrastructure.Persistence.Contexts.Abstraction;
-using BMS.Infrastructure.Persistence.Repositories;
+using BMS.Application.Services.PublishersService.Models;
+using BMS.Data.Models;
+using BMS.Data.Persistence.Contexts;
+using BMS.Data.Persistence.Repositories;
+
 
 namespace BMS.Application.Services.PublishersService;
 
@@ -14,6 +15,20 @@ public class PublisherService : IPublisherService
     public PublisherService(IRepository<Publisher, MsSqlDbContext> repository)
     {
         _repository = repository;
+    }
+
+    public PublisherListModel GetPublisherList()
+    {
+        var categories = _repository.GetList();
+
+        var categoriesDto = categories.Select(b => new PublisherDto(b.Id, b.CreatedAt, b.UpdatedAt, b.Name));
+
+        var categoryListModel = new PublisherListModel()
+        {
+            Items = categoriesDto.ToList()
+        };
+
+        return categoryListModel;
     }
 
     public PublisherDto GetPublisherById(int publisherId)
